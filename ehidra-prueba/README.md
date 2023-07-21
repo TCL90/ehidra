@@ -1,66 +1,9 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Prueba Técnica eHidra - Tomás Cabello López
+En este README vamos a ver punto por punto como comprobar que este repositorio cumple con lo exigido en la prueba técnica. Lo primero que debemos hacer es meternos en la carpeta ehidra-prueba con el comando "cd ehidra-prueba" y desplegar la web en local con el comando "sail up -d", esto iniciará los contenedores de Docker que se encargan de gestionar los servicios usados en la web. 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A continuación, tenemos que acceder desde nuestro navegador a la dirección localhost, donde nos aparecerá la ventana de Registro. Desde esta ventana nos podemos registrar con un nombre, email y contraseña. Si nos registramos, nos aparecerá una ventana que nos instará a verificar nuestro correo, desde esta podemos reenviar el correo de verificación a nuestro email o salir de nuestra cuenta. Mientras no verifiquemos nuestro correo solo podremos acceder al login y a esta página, todas las demás nos reenviarán a esta hasta salir de nuestra cuenta.
 
-## About Laravel
+Para poder verificar nuestro correo tendremos que usar la web https://mailtrap.io, donde podemos testear la funcionalidad de envío de correo de verificación de forma gratuita a través de un servidor smtp de prueba que se puede configurar desde el archivo .env, que contiene todas las variables de entorno de la aplicación web. Si se desea saltar este paso, se puede entrar cliclando sobre el enlace "¿Tienes ya una cuenta?" de la ventana de registro, usando la cuenta tomascl1998@gmail.com con contraseña "pruebatomas2".
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Una vez dentro de la aplicación nos aparecerá la ventana por defecto de Dasboard que nos dará la bienvenida, en la esquina derecha superior se podrá acceder al Perfil o salir de la cuenta para volver a la ventana de registro. Si accedemos a Perfil, podemos actualizar nuestro nombre y email, actualizar nuestra contraseña y borrar nuestra cuenta. Por otro lado, en la ventana de navegación superior, al lado de Dashboard encontramos la pestaña usuarios. Si clicamos en ella, nos aparecerá una Datatable hecha a partir de la librería Lirewire donde se puede ver el listado de usuarios, filtrarlos por nombre o email, ordenarlos en orden ascendente o descendente clicando sobre el título de cada columna y exportar los datos. Además, si clicamos en el id de un usuario, nos llevará a una vetana donde aparecerá su nombre y email. En esta ventana he implementado un componente Alpine.js muy simple, si se pulsa en "Más detalle..." se puede ver la fecha de cración y de verificación de la cuenta.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
