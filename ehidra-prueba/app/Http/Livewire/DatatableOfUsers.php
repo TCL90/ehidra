@@ -15,12 +15,15 @@ class DatatableOfUsers extends LivewireDatatable
     public function columns()
     {
         return [
-            Column::callback('name', function ($value) {
+            Column::callback('id', function ($value) {
                 return view('datatables::link', [
-                    'href' => "/user/" . Str::slug($value),
+                    'href' => "/users/" . Str::slug($value),
                     'slot' => ucfirst($value)
                     ]);
             })
+                ->label('ID'),
+
+            Column::name('name')
                 ->label('Nombre')
                 ->sortBy('name')
                 ->defaultSort('asc')
